@@ -13,6 +13,8 @@
 		E364629A2523813000E456D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E36462992523813000E456D5 /* Assets.xcassets */; };
 		E364629D2523813000E456D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E364629C2523813000E456D5 /* Preview Assets.xcassets */; };
 		E36462A02523813000E456D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E364629E2523813000E456D5 /* LaunchScreen.storyboard */; };
+		E36DC9F0252392CE0024F62F /* PairsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36DC9EF252392CE0024F62F /* PairsModel.swift */; };
+		E36DC9F22523938A0024F62F /* PairsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36DC9F12523938A0024F62F /* PairsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E364629C2523813000E456D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E364629F2523813000E456D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E36462A12523813000E456D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E36DC9EF252392CE0024F62F /* PairsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairsModel.swift; sourceTree = "<group>"; };
+		E36DC9F12523938A0024F62F /* PairsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +60,12 @@
 		E36462922523812900E456D5 /* Mindji */ = {
 			isa = PBXGroup;
 			children = (
-				E36462932523812900E456D5 /* AppDelegate.swift */,
-				E36462952523812900E456D5 /* SceneDelegate.swift */,
-				E36462972523812900E456D5 /* ContentView.swift */,
-				E36462992523813000E456D5 /* Assets.xcassets */,
-				E364629E2523813000E456D5 /* LaunchScreen.storyboard */,
+				E36DC9F625239D480024F62F /* Resources */,
+				E36DC9F525239D360024F62F /* View */,
 				E36462A12523813000E456D5 /* Info.plist */,
 				E364629B2523813000E456D5 /* Preview Content */,
+				E36DC9F325239D080024F62F /* Model */,
+				E36DC9F425239D120024F62F /* ViewModel */,
 			);
 			path = Mindji;
 			sourceTree = "<group>";
@@ -70,9 +73,44 @@
 		E364629B2523813000E456D5 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				E364629E2523813000E456D5 /* LaunchScreen.storyboard */,
+				E36462992523813000E456D5 /* Assets.xcassets */,
 				E364629C2523813000E456D5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E36DC9F325239D080024F62F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E36DC9EF252392CE0024F62F /* PairsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E36DC9F425239D120024F62F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E36DC9F12523938A0024F62F /* PairsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E36DC9F525239D360024F62F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E36462972523812900E456D5 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E36DC9F625239D480024F62F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E36462952523812900E456D5 /* SceneDelegate.swift */,
+				E36462932523812900E456D5 /* AppDelegate.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +185,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E36462942523812900E456D5 /* AppDelegate.swift in Sources */,
+				E36DC9F22523938A0024F62F /* PairsViewModel.swift in Sources */,
 				E36462962523812900E456D5 /* SceneDelegate.swift in Sources */,
 				E36462982523812900E456D5 /* ContentView.swift in Sources */,
+				E36DC9F0252392CE0024F62F /* PairsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,10 +9,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    var pairsViewModel: PairsViewModel
+    
     var body: some View {
         return HStack() {
-            ForEach(0..<4) { index in
-                CardView(isFaceUp: true)
+            ForEach(pairsViewModel.cards) { card in
+                CardView(card: card).onTapGesture {
+                    self.pairsViewModel.chooseCard(card: card)
+                }
             }
         }
             .padding()
@@ -22,14 +26,14 @@ struct ContentView: View {
 }
 
 struct CardView: View {
-    var isFaceUp: Bool
+    var card: PairsModel<String>.Card
     
     var body: some View {
         ZStack() {
-            if isFaceUp {
+            if card.isFaceUp {
                 RoundedRectangle(cornerRadius: 15).fill(Color.white)
                 RoundedRectangle(cornerRadius: 15).stroke()
-                Text("😎")
+                Text(card.content)
             } else {
                 RoundedRectangle(cornerRadius: 15).fill()
             }
@@ -40,6 +44,6 @@ struct CardView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(pairsViewModel: PairsViewModel())
     }
 }
