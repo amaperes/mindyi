@@ -8,16 +8,17 @@
 
 import Foundation
 
-class PairsViewModel {
-    private var pairsModel: PairsModel<String> = PairsViewModel.createPairsModel()
+class PairsViewModel: ObservableObject {
+    @Published private var pairsModel: PairsModel<String> = PairsViewModel.createPairsModel()
     
     static func createPairsModel() -> PairsModel<String> {
-        let emojis = ["🤪", "🥺", "😱"]
-        return PairsModel<String>(numberOfPairsOfCards: 3) { index in
+        let emojis = ["🤡", "😌", "😱", "🥳", "🤗"]
+        let random = Int.random(in: 2...5)
+        return PairsModel<String>(numberOfPairsOfCards: random) { index in
             return emojis[index]
         }
     }
-    
+        
     //MARK: - Access to the Model
     
     var cards: Array<PairsModel<String>.Card> {
@@ -27,6 +28,6 @@ class PairsViewModel {
     //MARK: - Intents from UI
 
     func chooseCard(card: PairsModel<String>.Card) {
-        pairsModel.chooseCard(card: card)
+        pairsModel.chooseCard(card: card)        
     }
 }

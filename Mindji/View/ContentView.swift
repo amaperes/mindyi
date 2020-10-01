@@ -8,20 +8,23 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct PairsView: View {
     var pairsViewModel: PairsViewModel
     
     var body: some View {
+        let font = pairsViewModel.cards.count < 10 ?  Font.largeTitle : Font.title
+
         return HStack() {
             ForEach(pairsViewModel.cards) { card in
                 CardView(card: card).onTapGesture {
                     self.pairsViewModel.chooseCard(card: card)
                 }
+                .aspectRatio(2/3, contentMode: .fit)
             }
         }
             .padding()
             .foregroundColor(Color.green)
-            .font(Font.largeTitle)
+            .font(font)
     }
 }
 
@@ -44,6 +47,6 @@ struct CardView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(pairsViewModel: PairsViewModel())
+        PairsView(pairsViewModel: PairsViewModel())
     }
 }

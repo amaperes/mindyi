@@ -17,10 +17,14 @@ struct PairsModel<CardContent> {
             cards.append(Card(id: index*2, content: content))
             cards.append(Card(id: index*2 + 1, content: content))
         }
+        cards.shuffle()
     }
     
-    func chooseCard(card: Card) {
+    mutating func chooseCard(card: Card) {
         print("Card tapped \(card)")
+        if let chosenIndex: Int = cards.firstIndex(matching: card) {
+            cards[chosenIndex].isFaceUp = !cards[chosenIndex].isFaceUp
+        }
     }
     
     struct Card : Identifiable {
