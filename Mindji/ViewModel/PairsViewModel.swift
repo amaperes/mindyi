@@ -9,16 +9,22 @@
 import Foundation
 
 class PairsViewModel: ObservableObject {
-    @Published private var pairsModel: PairsModel<String> = PairsViewModel.createPairsModel()
-    
-    static func createPairsModel() -> PairsModel<String> {
-        var emojis = ["🤡", "😌", "😱", "🥳", "🤗","🦋","🦜","🍀","🍄","🥑","🚣🏻","⏰","🇷🇴"]
-        emojis.shuffle()
 
-        let random = Int.random(in: 2...emojis[2..<7].count)
-        return PairsModel<String>(numberOfPairsOfCards: random) { index in
+    @Published private var pairsModel: PairsModel<String>
+        
+    
+    var theme: Theme = themes.randomElement()!
+
+    static func createPairsModel(theme: Theme) -> PairsModel<String> {
+        let emojis: [String] = theme.emojis.shuffled()
+
+        return PairsModel<String>(numberOfPairsOfCards: theme.numberOfPairsOfCardsToShow ?? Int.random(in: 4..<emojis.count-1)) { index in
             return emojis[index]
         }
+    }
+    
+    init() {
+       pairsModel = PairsViewModel.createPairsModel(theme: theme)
     }
         
     //MARK: - Access to the Model

@@ -9,7 +9,7 @@
 import Foundation
 
 struct PairsModel<CardContent> where CardContent: Equatable {
-    var cards: Array<Card> = Array<Card>()
+    var cards: Array<Card>
     
     var indexOfTheOneAndOnlyFaceUpCard: Int? {
         get { cards.indices.filter { cards[$0].isFaceUp }.only }
@@ -21,6 +21,7 @@ struct PairsModel<CardContent> where CardContent: Equatable {
     }
     
     init(numberOfPairsOfCards: Int, cardContent: (Int) -> CardContent) {
+        cards = Array<Card>()
         for index in 0..<numberOfPairsOfCards {
             let content = cardContent(index)
             cards.append(Card(id: index*2, content: content))
@@ -30,7 +31,6 @@ struct PairsModel<CardContent> where CardContent: Equatable {
     }
     
     mutating func chooseCard(card: Card) {
-        print("Card tapped \(card)")
         if let chosenIndex: Int = cards.firstIndex(matching: card), !cards[chosenIndex].isFaceUp, !cards[chosenIndex].isMatched {
             if let potentialMatchIndex = indexOfTheOneAndOnlyFaceUpCard {
                 if cards[chosenIndex].content == cards[potentialMatchIndex].content {

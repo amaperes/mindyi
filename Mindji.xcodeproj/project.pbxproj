@@ -19,6 +19,7 @@
 		E3A18DE32525BD8900724D83 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A18DE22525BD8900724D83 /* GridLayout.swift */; };
 		E3A18DE62525C5C600724D83 /* Array+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A18DE52525C5C600724D83 /* Array+Identifiable.swift */; };
 		E3A18DE82526005A00724D83 /* Array+Only.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A18DE72526005A00724D83 /* Array+Only.swift */; };
+		E3A18DEB252615A100724D83 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A18DEA252615A100724D83 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E3A18DE22525BD8900724D83 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		E3A18DE52525C5C600724D83 /* Array+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Identifiable.swift"; sourceTree = "<group>"; };
 		E3A18DE72526005A00724D83 /* Array+Only.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Only.swift"; sourceTree = "<group>"; };
+		E3A18DEA252615A100724D83 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				E36462A12523813000E456D5 /* Info.plist */,
 				E364629B2523813000E456D5 /* Preview Content */,
 				E36DC9F325239D080024F62F /* Model */,
+				E3A18DEA252615A100724D83 /* Theme.swift */,
 				E36DC9F425239D120024F62F /* ViewModel */,
 			);
 			path = Mindji;
@@ -108,6 +111,7 @@
 		E36DC9F525239D360024F62F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E3A18DE92526155C00724D83 /* Theme */,
 				E36462972523812900E456D5 /* PairsView.swift */,
 				E3A18DDE2524B59100724D83 /* Grid.swift */,
 				E3A18DE22525BD8900724D83 /* GridLayout.swift */,
@@ -131,6 +135,13 @@
 				E3A18DE72526005A00724D83 /* Array+Only.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E3A18DE92526155C00724D83 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +222,7 @@
 				E36462982523812900E456D5 /* PairsView.swift in Sources */,
 				E36DC9F0252392CE0024F62F /* PairsModel.swift in Sources */,
 				E3A18DE62525C5C600724D83 /* Array+Identifiable.swift in Sources */,
+				E3A18DEB252615A100724D83 /* Theme.swift in Sources */,
 				E3A18DE32525BD8900724D83 /* GridLayout.swift in Sources */,
 				E3A18DDF2524B59100724D83 /* Grid.swift in Sources */,
 			);
