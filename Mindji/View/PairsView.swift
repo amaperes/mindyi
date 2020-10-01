@@ -12,14 +12,23 @@ struct PairsView: View {
     @ObservedObject var pairsViewModel: PairsViewModel
     
     var body: some View {
-        Grid(pairsViewModel.cards) { card in
-            CardView(card: card).onTapGesture {
-                self.pairsViewModel.chooseCard(card: card)
+        NavigationView {
+            VStack {
+                Grid(pairsViewModel.cards) { card in
+                    CardView(card: card).onTapGesture {
+                        self.pairsViewModel.chooseCard(card: card)
+                    }
+                    .padding(5)
+                }
+                .padding()
+                .navigationBarTitle(pairsViewModel.theme.name)
+                .navigationBarItems(trailing: Button("New Game"){
+                    self.pairsViewModel.newGame()
+                }).foregroundColor(pairsViewModel.theme.color)
+
             }
-            .padding(5)
         }
-        .padding()
-        .foregroundColor(Color.green)
+        
     }
 }
 

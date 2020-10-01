@@ -38,4 +38,9 @@ class PairsViewModel: ObservableObject {
     func chooseCard(card: PairsModel<String>.Card) {
         pairsModel.chooseCard(card: card)        
     }
+    
+    func newGame() {
+        theme = themes.randomElement()!
+        pairsModel = PairsViewModel.createPairsModel(theme: theme)
+    }
 }
