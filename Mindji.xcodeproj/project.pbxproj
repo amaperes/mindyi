@@ -18,6 +18,7 @@
 		E3A18DDF2524B59100724D83 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A18DDE2524B59100724D83 /* Grid.swift */; };
 		E3A18DE32525BD8900724D83 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A18DE22525BD8900724D83 /* GridLayout.swift */; };
 		E3A18DE62525C5C600724D83 /* Array+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A18DE52525C5C600724D83 /* Array+Identifiable.swift */; };
+		E3A18DE82526005A00724D83 /* Array+Only.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A18DE72526005A00724D83 /* Array+Only.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E3A18DDE2524B59100724D83 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		E3A18DE22525BD8900724D83 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		E3A18DE52525C5C600724D83 /* Array+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Identifiable.swift"; sourceTree = "<group>"; };
+		E3A18DE72526005A00724D83 /* Array+Only.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Only.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				E3A18DE52525C5C600724D83 /* Array+Identifiable.swift */,
+				E3A18DE72526005A00724D83 /* Array+Only.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				E36462942523812900E456D5 /* AppDelegate.swift in Sources */,
 				E36DC9F22523938A0024F62F /* PairsViewModel.swift in Sources */,
 				E36462962523812900E456D5 /* SceneDelegate.swift in Sources */,
+				E3A18DE82526005A00724D83 /* Array+Only.swift in Sources */,
 				E36462982523812900E456D5 /* PairsView.swift in Sources */,
 				E36DC9F0252392CE0024F62F /* PairsModel.swift in Sources */,
 				E3A18DE62525C5C600724D83 /* Array+Identifiable.swift in Sources */,

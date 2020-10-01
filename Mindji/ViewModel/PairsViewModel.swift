@@ -12,8 +12,10 @@ class PairsViewModel: ObservableObject {
     @Published private var pairsModel: PairsModel<String> = PairsViewModel.createPairsModel()
     
     static func createPairsModel() -> PairsModel<String> {
-        let emojis = ["🤡", "😌", "😱", "🥳", "🤗"]
-        let random = Int.random(in: 2...5)
+        var emojis = ["🤡", "😌", "😱", "🥳", "🤗","🦋","🦜","🍀","🍄","🥑","🚣🏻","⏰","🇷🇴"]
+        emojis.shuffle()
+
+        let random = Int.random(in: 2...emojis[2..<7].count)
         return PairsModel<String>(numberOfPairsOfCards: random) { index in
             return emojis[index]
         }
