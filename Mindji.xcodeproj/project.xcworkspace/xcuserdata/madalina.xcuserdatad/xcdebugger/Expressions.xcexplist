@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "PairModel.chooseCard(card:):PairModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cards">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PairModel.indexOfTheOneAndOnlyFaceUpCard.getter:PairModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cards.indicies.filter { cards[$0].isFaceUp }.only">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

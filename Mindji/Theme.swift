@@ -22,43 +22,43 @@ let themes: [Theme] = [
         name: "Halloween",
         emojis: ["👻","🎃","🕷","🍬","🍭","👁","🕸","🥧","🕯","🧟‍♀️"],
         color: .orange,
-        accentColor: .red),
+        accentColor: .yellow),
     Theme(
         name: "Jobs",
         emojis: ["🧑🏻‍🍳","👩🏼‍⚕️","👮🏻‍♂️","👷🏻","👩🏼‍🌾","👩🏼‍🏫","👨🏼‍🔧","👨🏼‍🔬","🧑🏽‍🚀","👨🏼‍⚖️","🧑🏼‍🚒"],
         numberOfPairsOfCardsToShow: 8,
-        color: .blue,
-        accentColor: .red),
+        color: .purple,
+        accentColor: .green),
     Theme(
         name: "Animals",
         emojis: ["🐶","🐨","🐥","🐠","🐰","🦊","🐼","🦧","🐯","🦜","🐿","🐸","🐵","🦋"],
         numberOfPairsOfCardsToShow: 12,
-        color: .yellow,
-        accentColor: .red),
+        color: .green,
+        accentColor: .purple),
     Theme(
         name: "Christmas",
         emojis: ["🤶🏻","🎅🏻","🎄","⛄️","☃️","❄️","🎁","🌬"],
         numberOfPairsOfCardsToShow: 7,
-        color: .red,
+        color: .green,
         accentColor: .red),
     Theme(
         name: "Food",
         emojis: ["🍏","🍐","🥥","🍍","🍋","🍉","🍇","🍓","🍒","🥦","🥕","🥑"],
         numberOfPairsOfCardsToShow: 9,
-        color: .purple,
-        accentColor: .red),
+        color: .green,
+        accentColor: .yellow),
     Theme(
         name: "Sports",
         emojis: ["🚴🏼","🧗🏽‍♀️","🚣🏻","🤽🏼","🏊🏻","🏄🏽‍♀️","🧘🏻","🏇🏼","🏌🏼","🤾🏼","⛹🏼","🏋🏻‍♂️","🏂","⛷"],
         numberOfPairsOfCardsToShow: 6,
-        color: .pink,
-        accentColor: .red),
+        color: .blue,
+        accentColor: .yellow),
     Theme(
         name: "Flags",
         emojis: ["🇧🇷","🇨🇳","🇨🇴","🇩🇰","🇫🇷","🇩🇪","🇬🇷","🇭🇺","🇮🇪","🇮🇹","🇱🇹","🇱🇺","🇷🇺","🇳🇱", "🇹🇭", "🇻🇳", "🇵🇰"],
         numberOfPairsOfCardsToShow: 8,
-        color: .green,
-        accentColor: .red)
+        color: .blue,
+        accentColor: .orange)
 ]
 
 

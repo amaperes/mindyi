@@ -17,7 +17,7 @@ struct PairsView: View {
                 if !pairsViewModel.gameOver {
                   Text("Score: \(pairsViewModel.score) ")
                     Grid(pairsViewModel.cards) { card in
-                        CardView(card: card).onTapGesture {
+                        CardView(card: card, gradient: Gradient(colors: [self.pairsViewModel.theme.color, self.pairsViewModel.theme.accentColor])).onTapGesture {
                             self.pairsViewModel.chooseCard(card: card)
                         }
                         .padding(5)
@@ -39,6 +39,8 @@ struct PairsView: View {
 struct CardView: View {
     var card: PairModel<String>.Card
     
+    let gradient: Gradient
+
     var body: some View {
         GeometryReader { geometry in
             self.body(for: geometry.size)
@@ -53,7 +55,7 @@ struct CardView: View {
                 Text(card.content)
             } else {
                 if !card.isMatched {
-                    RoundedRectangle(cornerRadius: cornerRadius).fill()
+                    RoundedRectangle(cornerRadius: cornerRadius).fill(LinearGradient(gradient: gradient, startPoint: .topLeading, endPoint: .bottomTrailing))
                 }
             }
         }
