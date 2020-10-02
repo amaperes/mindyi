@@ -14,26 +14,30 @@ struct PairsView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Grid(pairsViewModel.cards) { card in
-                    CardView(card: card).onTapGesture {
-                        self.pairsViewModel.chooseCard(card: card)
+                if !pairsViewModel.gameOver {
+                  Text("Score: \(pairsViewModel.score) ")
+                    Grid(pairsViewModel.cards) { card in
+                        CardView(card: card).onTapGesture {
+                            self.pairsViewModel.chooseCard(card: card)
+                        }
+                        .padding(5)
                     }
-                    .padding(5)
+                    .padding()
+                    .navigationBarTitle(pairsViewModel.theme.name)
+                    .navigationBarItems(trailing: Button("New Game"){
+                        self.pairsViewModel.newGame()
+                    }).foregroundColor(pairsViewModel.theme.color)
+                } else {
+                    Text("Game Over!!")
+                    Text("Score: \(pairsViewModel.score) ")
                 }
-                .padding()
-                .navigationBarTitle(pairsViewModel.theme.name)
-                .navigationBarItems(trailing: Button("New Game"){
-                    self.pairsViewModel.newGame()
-                }).foregroundColor(pairsViewModel.theme.color)
-
             }
         }
-        
     }
 }
 
 struct CardView: View {
-    var card: PairsModel<String>.Card
+    var card: PairModel<String>.Card
     
     var body: some View {
         GeometryReader { geometry in
@@ -62,7 +66,6 @@ struct CardView: View {
     
     let cornerRadius: CGFloat = 10.0
     let edgeLineWidth: CGFloat = 2.5
-    //let aspectRatio: CGFloat = 2/3
     func fontSize(for size: CGSize) -> CGFloat {
         min(size.width, size.height) * 0.5
     }
