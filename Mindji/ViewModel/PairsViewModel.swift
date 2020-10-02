@@ -25,6 +25,11 @@ class PairsViewModel: ObservableObject {
     init() {
        pairsModel = PairsViewModel.createPairsModel(theme: theme)
     }
+    
+    func newGame() {
+        theme = themes.randomElement()!
+        pairsModel = PairsViewModel.createPairsModel(theme: theme)
+    }
         
     //MARK: - Access to the Model
     
@@ -44,10 +49,5 @@ class PairsViewModel: ObservableObject {
 
     func chooseCard(card: PairModel<String>.Card) {
         pairsModel.chooseCard(card: card)        
-    }
-    
-    func newGame() {
-        theme = themes.randomElement()!
-        pairsModel = PairsViewModel.createPairsModel(theme: theme)
     }
 }

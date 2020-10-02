@@ -10,11 +10,8 @@ import Foundation
 
 struct PairModel<CardContent> where CardContent: Equatable {
     var cards: Array<Card>
-    
     var score: Int = 0
-    
     var numberOfPairsOfCardsMatched: Int = 0
-    
     var gameOver: Bool = false
     
     var indexOfTheOneAndOnlyFaceUpCard: Int? {
@@ -61,7 +58,6 @@ struct PairModel<CardContent> where CardContent: Equatable {
                 
             }
         }
-        print(score)
     }
     
     struct Card : Identifiable {

@@ -14,8 +14,8 @@
             filePath = "Mindji/Model/PairModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "chooseCard(card:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "Mindji/Model/PairModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "chooseCard(card:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "Mindji/Model/PairModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "indexOfTheOneAndOnlyFaceUpCard"
             landmarkType = "24">
             <Locations>
@@ -94,8 +94,8 @@
             filePath = "Mindji/Model/PairModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "indexOfTheOneAndOnlyFaceUpCard"
             landmarkType = "24">
             <Locations>
@@ -142,8 +142,8 @@
             filePath = "Mindji/Model/PairModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "indexOfTheOneAndOnlyFaceUpCard"
             landmarkType = "24">
          </BreakpointContent>

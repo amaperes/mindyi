@@ -33,8 +33,8 @@ let themes: [Theme] = [
         name: "Animals",
         emojis: ["🐶","🐨","🐥","🐠","🐰","🦊","🐼","🦧","🐯","🦜","🐿","🐸","🐵","🦋"],
         numberOfPairsOfCardsToShow: 12,
-        color: .green,
-        accentColor: .purple),
+        color: .blue,
+        accentColor: .green),
     Theme(
         name: "Christmas",
         emojis: ["🤶🏻","🎅🏻","🎄","⛄️","☃️","❄️","🎁","🌬"],
@@ -45,8 +45,8 @@ let themes: [Theme] = [
         name: "Food",
         emojis: ["🍏","🍐","🥥","🍍","🍋","🍉","🍇","🍓","🍒","🥦","🥕","🥑"],
         numberOfPairsOfCardsToShow: 9,
-        color: .green,
-        accentColor: .yellow),
+        color: .yellow,
+        accentColor: .green),
     Theme(
         name: "Sports",
         emojis: ["🚴🏼","🧗🏽‍♀️","🚣🏻","🤽🏼","🏊🏻","🏄🏽‍♀️","🧘🏻","🏇🏼","🏌🏼","🤾🏼","⛹🏼","🏋🏻‍♂️","🏂","⛷"],
@@ -57,8 +57,8 @@ let themes: [Theme] = [
         name: "Flags",
         emojis: ["🇧🇷","🇨🇳","🇨🇴","🇩🇰","🇫🇷","🇩🇪","🇬🇷","🇭🇺","🇮🇪","🇮🇹","🇱🇹","🇱🇺","🇷🇺","🇳🇱", "🇹🇭", "🇻🇳", "🇵🇰"],
         numberOfPairsOfCardsToShow: 8,
-        color: .blue,
-        accentColor: .orange)
+        color: .orange,
+        accentColor: .blue)
 ]
 
 

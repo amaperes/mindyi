@@ -38,7 +38,6 @@ struct PairsView: View {
 
 struct CardView: View {
     var card: PairModel<String>.Card
-    
     let gradient: Gradient
 
     var body: some View {
