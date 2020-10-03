@@ -26,14 +26,13 @@ let themes: [Theme] = [
     Theme(
         name: "Jobs",
         emojis: ["🧑🏻‍🍳","👩🏼‍⚕️","👮🏻‍♂️","👷🏻","👩🏼‍🌾","👩🏼‍🏫","👨🏼‍🔧","👨🏼‍🔬","🧑🏽‍🚀","👨🏼‍⚖️","🧑🏼‍🚒"],
-        numberOfPairsOfCardsToShow: 8,
         color: .purple,
         accentColor: .green),
     Theme(
         name: "Animals",
         emojis: ["🐶","🐨","🐥","🐠","🐰","🦊","🐼","🦧","🐯","🦜","🐿","🐸","🐵","🦋"],
-        numberOfPairsOfCardsToShow: 12,
-        color: .blue,
+        numberOfPairsOfCardsToShow: 5,
+        color: .red,
         accentColor: .gray),
     Theme(
         name: "Christmas",
@@ -44,21 +43,21 @@ let themes: [Theme] = [
     Theme(
         name: "Food",
         emojis: ["🍏","🍐","🥥","🍍","🍋","🍉","🍇","🍓","🍒","🥦","🥕","🥑"],
-        numberOfPairsOfCardsToShow: 9,
+        numberOfPairsOfCardsToShow: 6,
         color: .yellow,
         accentColor: .green),
     Theme(
         name: "Sports",
         emojis: ["🚴🏼","🧗🏽‍♀️","🚣🏻","🤽🏼","🏊🏻","🏄🏽‍♀️","🧘🏻","🏇🏼","🏌🏼","🤾🏼","⛹🏼","🏋🏻‍♂️","🏂","⛷"],
-        numberOfPairsOfCardsToShow: 6,
+        numberOfPairsOfCardsToShow: 5,
         color: .gray,
         accentColor: .yellow),
     Theme(
         name: "Flags",
         emojis: ["🇧🇷","🇨🇳","🇨🇴","🇩🇰","🇫🇷","🇩🇪","🇬🇷","🇭🇺","🇮🇪","🇮🇹","🇱🇹","🇱🇺","🇷🇺","🇳🇱", "🇹🇭", "🇻🇳", "🇵🇰"],
-        numberOfPairsOfCardsToShow: 8,
-        color: .red,
-        accentColor: .blue)
+        numberOfPairsOfCardsToShow: 6,
+        color: .blue,
+        accentColor: .red)
 ]
 
 
