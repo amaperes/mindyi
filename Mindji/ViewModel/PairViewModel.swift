@@ -1,5 +1,5 @@
 //
-//  PairsViewModel.swift
+//  PairViewModel.swift
 //  Mindji
 //
 //  Created by Antonela Madalina on 29/09/2020.
@@ -8,13 +8,13 @@
 
 import Foundation
 
-class PairsViewModel: ObservableObject {
+class PairViewModel: ObservableObject {
 
-    @Published private var pairsModel: PairModel<String>
+    @Published private var pairModel: PairModel<String>
     
-    var theme: Theme = themes.randomElement()!
+    private(set) var theme: Theme = themes.randomElement()!
 
-    static func createPairsModel(theme: Theme) -> PairModel<String> {
+    private static func createPairModel(with theme: Theme) -> PairModel<String> {
         let emojis: [String] = theme.emojis.shuffled()
 
         return PairModel<String>(numberOfPairsOfCards: theme.numberOfPairsOfCardsToShow ?? Int.random(in: 4..<emojis.count-1)) { index in
@@ -23,31 +23,31 @@ class PairsViewModel: ObservableObject {
     }
     
     init() {
-       pairsModel = PairsViewModel.createPairsModel(theme: theme)
+       pairModel = PairViewModel.createPairModel(with: theme)
+    }
+
+    //MARK: - Access to the Model
+    
+    var cards: Array<PairModel<String>.Card> {
+        pairModel.cards
+    }
+    
+    var score: Int {
+        pairModel.score
+    }
+    
+    var gameOver: Bool {
+        pairModel.gameOver
+    }
+    
+    //MARK: - Intents from the View
+
+    func chooseCard(card: PairModel<String>.Card) {
+        pairModel.chooseCard(card: card)
     }
     
     func newGame() {
         theme = themes.randomElement()!
-        pairsModel = PairsViewModel.createPairsModel(theme: theme)
-    }
-        
-    //MARK: - Access to the Model
-    
-    var cards: Array<PairModel<String>.Card> {
-        pairsModel.cards
-    }
-    
-    var score: Int {
-        pairsModel.score
-    }
-    
-    var gameOver: Bool {
-        pairsModel.gameOver
-    }
-    
-    //MARK: - Intents from UI
-
-    func chooseCard(card: PairModel<String>.Card) {
-        pairsModel.chooseCard(card: card)        
+        pairModel = PairViewModel.createPairModel(with: theme)
     }
 }

@@ -1,5 +1,5 @@
 //
-//  PairsView.swift
+//  PairView.swift
 //  Mindji
 //
 //  Created by Antonela Madalina on 29/09/2020.
@@ -8,28 +8,30 @@
 
 import SwiftUI
 
-struct PairsView: View {
-    @ObservedObject var pairsViewModel: PairsViewModel
+struct PairView: View {
+    @ObservedObject var pairViewModel: PairViewModel
     
     var body: some View {
         NavigationView {
             VStack {
-                if !pairsViewModel.gameOver {
-                  Text("Score: \(pairsViewModel.score) ")
-                    Grid(pairsViewModel.cards) { card in
-                        CardView(card: card, gradient: Gradient(colors: [self.pairsViewModel.theme.color, self.pairsViewModel.theme.accentColor])).onTapGesture {
-                            self.pairsViewModel.chooseCard(card: card)
+                if !pairViewModel.gameOver {
+                    Text("Score: \(pairViewModel.score) ")
+                    Grid(pairViewModel.cards) { card in
+                        CardView(card: card, gradient: Gradient(colors: [self.pairViewModel.theme.color, self.pairViewModel.theme.accentColor])).onTapGesture {
+                            self.pairViewModel.chooseCard(card: card)
                         }
                         .padding(5)
                     }
                     .padding()
-                    .navigationBarTitle(pairsViewModel.theme.name)
+                    .navigationBarTitle(pairViewModel.theme.name)
                     .navigationBarItems(trailing: Button("New Game"){
-                        self.pairsViewModel.newGame()
-                    }).foregroundColor(pairsViewModel.theme.color)
+                        self.pairViewModel.newGame()
+                    }).foregroundColor(pairViewModel.theme.color)
+                    
+              
                 } else {
                     Text("Game Over!!")
-                    Text("Score: \(pairsViewModel.score) ")
+                    Text("Score: \(pairViewModel.score) ")
                 }
             }
         }
@@ -46,11 +48,12 @@ struct CardView: View {
         }
     }
     
-    func body(for size: CGSize) -> some View {
+    private func body(for size: CGSize) -> some View {
         ZStack() {
             if card.isFaceUp {
                 RoundedRectangle(cornerRadius: cornerRadius).fill(Color.white)
                 RoundedRectangle(cornerRadius: cornerRadius).stroke(lineWidth: edgeLineWidth)
+                Circle()
                 Text(card.content)
             } else {
                 if !card.isMatched {
@@ -65,36 +68,16 @@ struct CardView: View {
     
     //MARK: - Drawing Constants
     
-    let cornerRadius: CGFloat = 10.0
-    let edgeLineWidth: CGFloat = 2.5
-    func fontSize(for size: CGSize) -> CGFloat {
+    private let cornerRadius: CGFloat = 10.0
+    private let edgeLineWidth: CGFloat = 2.5
+    private func fontSize(for size: CGSize) -> CGFloat {
         min(size.width, size.height) * 0.5
     }
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        PairsView(pairsViewModel: PairsViewModel())
+        PairView(pairViewModel: PairViewModel())
     }
 }

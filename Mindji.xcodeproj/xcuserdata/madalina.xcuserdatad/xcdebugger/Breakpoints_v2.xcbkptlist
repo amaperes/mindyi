@@ -14,8 +14,8 @@
             filePath = "Mindji/Model/PairModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "chooseCard(card:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,122 +30,10 @@
             filePath = "Mindji/Model/PairModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "chooseCard(card:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "12C51C3B-07F5-4F1F-9491-A4519CD13C3E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mindji/Model/PairModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "indexOfTheOneAndOnlyFaceUpCard"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "12C51C3B-07F5-4F1F-9491-A4519CD13C3E - 974442de4ad722ad"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mindji.PairModel.indexOfTheOneAndOnlyFaceUpCard.getter : Swift.Optional&lt;Swift.Int&gt;"
-                  moduleName = "Mindji"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/madalina/Documents/Swift/Mindji/Mindji/Model/PairModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "71">
-               </Location>
-               <Location
-                  uuid = "12C51C3B-07F5-4F1F-9491-A4519CD13C3E - d495bd3f5d628869"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Int) -&gt; Swift.Bool in Mindji.PairModel.indexOfTheOneAndOnlyFaceUpCard.getter : Swift.Optional&lt;Swift.Int&gt;"
-                  moduleName = "Mindji"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/madalina/Documents/Swift/Mindji/Mindji/Model/PairModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "107">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "00121E9B-B548-4907-96B3-607FD52974BC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mindji/Model/PairModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "indexOfTheOneAndOnlyFaceUpCard"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "00121E9B-B548-4907-96B3-607FD52974BC - 974442de4ad722ad"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Mindji.PairModel.indexOfTheOneAndOnlyFaceUpCard.getter : Swift.Optional&lt;Swift.Int&gt;"
-                  moduleName = "Mindji"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/madalina/Documents/Swift/Mindji/Mindji/Model/PairModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "71">
-               </Location>
-               <Location
-                  uuid = "00121E9B-B548-4907-96B3-607FD52974BC - d495bd3f5d628869"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Int) -&gt; Swift.Bool in Mindji.PairModel.indexOfTheOneAndOnlyFaceUpCard.getter : Swift.Optional&lt;Swift.Int&gt;"
-                  moduleName = "Mindji"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/madalina/Documents/Swift/Mindji/Mindji/Model/PairModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "107">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9714D025-96FC-47DB-963F-F2602CC5C9AA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Mindji/Model/PairModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "indexOfTheOneAndOnlyFaceUpCard"
-            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

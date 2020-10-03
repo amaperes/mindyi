@@ -9,19 +9,11 @@
 import Foundation
 
 struct PairModel<CardContent> where CardContent: Equatable {
-    var cards: Array<Card>
-    var score: Int = 0
-    var numberOfPairsOfCardsMatched: Int = 0
-    var gameOver: Bool = false
-    
-    var indexOfTheOneAndOnlyFaceUpCard: Int? {
-        get { cards.indices.filter { cards[$0].isFaceUp }.only }
-        set {
-            for index in cards.indices {
-                cards[index].isFaceUp = (index == newValue)
-            }
-        }
-    }
+    private(set) var cards: Array<Card>
+    private(set) var score = 0
+    private var twistedCards = Set<Int>()
+    private var numberOfPairsOfCardsMatched = 0
+    private(set) var gameOver = false
     
     init(numberOfPairsOfCards: Int, cardContent: (Int) -> CardContent) {
         cards = Array<Card>()
@@ -33,11 +25,18 @@ struct PairModel<CardContent> where CardContent: Equatable {
         cards.shuffle()
     }
     
+    private var indexOfTheOneAndOnlyFaceUpCard: Int? {
+           get { cards.indices.filter { cards[$0].isFaceUp }.only }
+           set {
+               for index in cards.indices {
+                   cards[index].isFaceUp = (index == newValue)
+               }
+           }
+       }
+    
     mutating func chooseCard(card: Card) {
         if let chosenIndex: Int = cards.firstIndex(matching: card), !cards[chosenIndex].isFaceUp, !cards[chosenIndex].isMatched {
             if let potentialMatchIndex = indexOfTheOneAndOnlyFaceUpCard {
-                cards[potentialMatchIndex].numberOfTwists += 1
-                cards[chosenIndex].numberOfTwists += 1
                 if cards[chosenIndex].content == cards[potentialMatchIndex].content {
                     cards[chosenIndex].isMatched = true
                     cards[potentialMatchIndex].isMatched = true
@@ -46,16 +45,19 @@ struct PairModel<CardContent> where CardContent: Equatable {
                     if numberOfPairsOfCardsMatched == cards.count {
                         gameOver = true
                     }
-                } else if cards[potentialMatchIndex].numberOfTwists > 1 && cards[chosenIndex].numberOfTwists > 1{
-                    score -= 2
-
-                } else if cards[potentialMatchIndex].numberOfTwists > 1 || cards[chosenIndex].numberOfTwists > 1 {
-                    score -= 1
+                } else {
+                    if twistedCards.contains(cards[chosenIndex].id) {
+                        score -= 1
+                    }
+                    if twistedCards.contains(cards[potentialMatchIndex].id) {
+                        score -= 1
+                    }
+                    twistedCards.insert(cards[chosenIndex].id)
+                    twistedCards.insert(cards[potentialMatchIndex].id)
                 }
                 cards[chosenIndex].isFaceUp = true
             } else {
                 indexOfTheOneAndOnlyFaceUpCard = chosenIndex
-                
             }
         }
     }
@@ -65,6 +67,5 @@ struct PairModel<CardContent> where CardContent: Equatable {
         var isFaceUp: Bool = false
         var isMatched: Bool = false
         var content: CardContent
-        var numberOfTwists: Int = 0
     }
 }
