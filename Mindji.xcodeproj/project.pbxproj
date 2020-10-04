@@ -21,6 +21,7 @@
 		E3A18DE82526005A00724D83 /* Array+Only.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A18DE72526005A00724D83 /* Array+Only.swift */; };
 		E3A18DEB252615A100724D83 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A18DEA252615A100724D83 /* Theme.swift */; };
 		E3FF9EAF2528BBE400516664 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF9EAE2528BBE400516664 /* Pie.swift */; };
+		E3FF9EB22528D39B00516664 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF9EB12528D39B00516664 /* Cardify.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E3A18DE72526005A00724D83 /* Array+Only.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Only.swift"; sourceTree = "<group>"; };
 		E3A18DEA252615A100724D83 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		E3FF9EAE2528BBE400516664 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
+		E3FF9EB12528D39B00516664 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		E36462922523812900E456D5 /* Mindji */ = {
 			isa = PBXGroup;
 			children = (
+				E3FF9EB02528D36200516664 /* View Modifiers */,
 				E323D19A252890BD0036D776 /* Templates */,
 				E3A18DE42525C5AB00724D83 /* Extensions */,
 				E36DC9F625239D480024F62F /* Resources */,
@@ -145,6 +148,14 @@
 				E3A18DE72526005A00724D83 /* Array+Only.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E3FF9EB02528D36200516664 /* View Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				E3FF9EB12528D39B00516664 /* Cardify.swift */,
+			);
+			path = "View Modifiers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +235,7 @@
 				E3A18DE82526005A00724D83 /* Array+Only.swift in Sources */,
 				E36462982523812900E456D5 /* PairView.swift in Sources */,
 				E36DC9F0252392CE0024F62F /* PairModel.swift in Sources */,
+				E3FF9EB22528D39B00516664 /* Cardify.swift in Sources */,
 				E3A18DE62525C5C600724D83 /* Array+Identifiable.swift in Sources */,
 				E3A18DEB252615A100724D83 /* Theme.swift in Sources */,
 				E3FF9EAF2528BBE400516664 /* Pie.swift in Sources */,
