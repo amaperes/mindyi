@@ -26,12 +26,19 @@ struct PairView: View {
                     }
                     .padding()
                     .navigationBarTitle(pairViewModel.theme.name)
-                    .navigationBarItems(trailing: Button("New Game"){
-                        withAnimation(.easeInOut(duration: 1)) {
-                            self.pairViewModel.newGame()
+                    .navigationBarItems(
+                        leading: Button("Reset") {
+                            withAnimation(.easeInOut(duration: 1)) {
+                                self.pairViewModel.reset()
+                            }
+                        },
+                        trailing: Button("New theme") {
+                            withAnimation(.easeInOut(duration: 1)) {
+                                self.pairViewModel.newGame()
+                            }
                         }
-                    }).foregroundColor(pairViewModel.theme.color)
-
+                    )
+                    .foregroundColor(pairViewModel.theme.color)
                 } else {
                     Group {
                         Text("Game Over!!")

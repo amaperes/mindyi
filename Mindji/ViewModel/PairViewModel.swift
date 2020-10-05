@@ -11,8 +11,7 @@ import Foundation
 class PairViewModel: ObservableObject {
 
     @Published private var pairModel: PairModel<String>
-    
-    private(set) var theme: Theme = themes.randomElement()!
+    private(set) var theme: Theme
 
     private static func createPairModel(with theme: Theme) -> PairModel<String> {
         let emojis: [String] = theme.emojis.shuffled()
@@ -23,6 +22,7 @@ class PairViewModel: ObservableObject {
     }
     
     init() {
+       theme = themes.randomElement()!
        pairModel = PairViewModel.createPairModel(with: theme)
     }
 
@@ -48,6 +48,10 @@ class PairViewModel: ObservableObject {
     
     func newGame() {
         theme = themes.randomElement()!
+        pairModel = PairViewModel.createPairModel(with: theme)
+    }
+    
+    func reset() {
         pairModel = PairViewModel.createPairModel(with: theme)
     }
 }
