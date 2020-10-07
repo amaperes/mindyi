@@ -40,7 +40,7 @@ struct PairView: View {
                 } else {
                         GeometryReader { geometry in
                             VStack {
-                                LottieView(filename: "21369-confetti").offset().frame(width: geometry.size.width, height: geometry.size.height)
+                                LottieView(filename: "confetti").offset().frame(width: geometry.size.width, height: geometry.size.height)
                             }
                             .overlay(
                                 Group {
