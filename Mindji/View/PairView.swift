@@ -16,36 +16,58 @@ struct PairView: View {
             VStack {
                 if !pairViewModel.gameOver {
                     Text("Score: \(pairViewModel.score) ")
+                    .fontWeight(.bold)
+                    .font(.subheadline)
+                    .padding(15)
+                    .background(LinearGradient(gradient: Gradient(colors: [pairViewModel.theme.color, pairViewModel.theme.accentColor]), startPoint: .leading, endPoint: .trailing))
+                    .foregroundColor(.white)
+                    .cornerRadius(20)
+                    .padding(5)
+                    .border(pairViewModel.theme.color, width: 2)
+                    .cornerRadius(20)
                     Grid(pairViewModel.cards) { card in
                         CardView(card: card, gradient: Gradient(colors: [self.pairViewModel.theme.color, self.pairViewModel.theme.accentColor])).onTapGesture {
                             withAnimation(.linear(duration: 0.75)) {
                                     self.pairViewModel.chooseCard(card: card)
                                 }
                         }
-                        .padding(5)
+                        .padding(3)
                     }
                     .padding()
                     .navigationBarTitle(pairViewModel.theme.name)
-                    .navigationBarItems(
-                        leading: Button("Reset") {
-                            withAnimation(.easeInOut(duration: 1)) {
+                    .foregroundColor(pairViewModel.theme.color)
+                    HStack {
+                        Button("Reset") {
+                            withAnimation(.easeInOut(duration: 0.3)) {
                                 self.pairViewModel.reset()
                             }
-                        },
-                        trailing: Button("New theme") {
-                            withAnimation(.easeInOut(duration: 1)) {
+                            
+                        }
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .padding(10)
+                        .foregroundColor(.white)
+                        .background(LinearGradient(gradient: Gradient(colors: [pairViewModel.theme.color, pairViewModel.theme.accentColor]), startPoint: .leading, endPoint: .trailing))
+                        .cornerRadius(20)
+                        .padding(.horizontal, 10)
+                        Button("New theme") {
+                            withAnimation(.easeOut(duration: 0.3)) {
                                 self.pairViewModel.newGame()
                             }
                         }
-                    )
-                    .foregroundColor(pairViewModel.theme.color)
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .padding(10)
+                        .foregroundColor(.white)
+                        .background(LinearGradient(gradient: Gradient(colors: [pairViewModel.theme.color, pairViewModel.theme.accentColor]), startPoint: .leading, endPoint: .trailing))
+                        .cornerRadius(20)
+                        .padding(.horizontal, 10)
+                    }
                 } else {
                     Group {
                         Text("Game Over!!")
                         Text("Score: \(pairViewModel.score) ")
                     }
                     .transition(.identity)
-                    .animation(Animation.easeOut(duration: 1))
+                    .animation(Animation.easeOut(duration: 0.7))
                 }
             }
         }
@@ -92,10 +114,10 @@ struct CardView: View {
                 Text(card.content)
                     .font(Font.system(size: fontSize(for: size)))
                     .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
-                    .animation(card.isMatched ? Animation.linear(duration: 1).repeatForever(autoreverses: false) : .default)
+                    .animation(card.isMatched ? Animation.spring().repeatForever(autoreverses: false) : .default)
             }
             .cardify(isFaceUp: card.isFaceUp, gradient: gradient)
-            .transition(.identity)
+            .transition(.scale)
         }
     }
     
@@ -103,13 +125,5 @@ struct CardView: View {
     
     private func fontSize(for size: CGSize) -> CGFloat {
         min(size.width, size.height) * 0.65
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        let game = PairViewModel()
-        game.chooseCard(card: game.cards[1])
-        return PairView(pairViewModel: PairViewModel())
     }
 }

@@ -27,7 +27,7 @@ let themes: [Theme] = [
         name: "Jobs",
         emojis: ["🧑🏻‍🍳","👩🏼‍⚕️","👮🏻‍♂️","👷🏻","👩🏼‍🌾","👩🏼‍🏫","👨🏼‍🔧","👨🏼‍🔬","🧑🏽‍🚀","👨🏼‍⚖️","🧑🏼‍🚒"],
         color: .purple,
-        accentColor: .green),
+        accentColor: .blue),
     Theme(
         name: "Animals",
         emojis: ["🐶","🐨","🐥","🐠","🐰","🦊","🐼","🦧","🐯","🦜","🐿","🐸","🐵","🦋"],
@@ -44,7 +44,7 @@ let themes: [Theme] = [
         name: "Food",
         emojis: ["🍏","🍐","🥥","🍍","🍋","🍉","🍇","🍓","🍒","🥦","🥕","🥑"],
         numberOfPairsOfCardsToShow: 6,
-        color: .yellow,
+        color: .gray,
         accentColor: .green),
     Theme(
         name: "Sports",
