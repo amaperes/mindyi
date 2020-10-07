@@ -28,7 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E36462902523812900E456D5 /* Mindji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mindji.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E36462902523812900E456D5 /* Mindyi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mindyi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E36462932523812900E456D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E36462952523812900E456D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E36462972523812900E456D5 /* PairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairView.swift; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		E36462872523812900E456D5 = {
 			isa = PBXGroup;
 			children = (
-				E36462922523812900E456D5 /* Mindji */,
+				E36462922523812900E456D5 /* Mindyi */,
 				E36462912523812900E456D5 /* Products */,
 				E3D4CE4C252DF2EF00B29568 /* Frameworks */,
 			);
@@ -81,12 +81,12 @@
 		E36462912523812900E456D5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E36462902523812900E456D5 /* Mindji.app */,
+				E36462902523812900E456D5 /* Mindyi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E36462922523812900E456D5 /* Mindji */ = {
+		E36462922523812900E456D5 /* Mindyi */ = {
 			isa = PBXGroup;
 			children = (
 				E3D9DC3A252E160600D7F3FD /* confetti.json */,
@@ -100,7 +100,7 @@
 				E36DC9F325239D080024F62F /* Model */,
 				E36DC9F425239D120024F62F /* ViewModel */,
 			);
-			path = Mindji;
+			path = Mindyi;
 			sourceTree = "<group>";
 		};
 		E364629B2523813000E456D5 /* Preview Content */ = {
@@ -177,9 +177,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E364628F2523812900E456D5 /* Mindji */ = {
+		E364628F2523812900E456D5 /* Mindyi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E36462A42523813000E456D5 /* Build configuration list for PBXNativeTarget "Mindji" */;
+			buildConfigurationList = E36462A42523813000E456D5 /* Build configuration list for PBXNativeTarget "Mindyi" */;
 			buildPhases = (
 				E364628C2523812900E456D5 /* Sources */,
 				E364628D2523812900E456D5 /* Frameworks */,
@@ -189,12 +189,12 @@
 			);
 			dependencies = (
 			);
-			name = Mindji;
+			name = Mindyi;
 			packageProductDependencies = (
 				E3D4CE4D252DF2EF00B29568 /* Lottie */,
 			);
 			productName = Mindji;
-			productReference = E36462902523812900E456D5 /* Mindji.app */;
+			productReference = E36462902523812900E456D5 /* Mindyi.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -212,7 +212,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E364628B2523812900E456D5 /* Build configuration list for PBXProject "Mindji" */;
+			buildConfigurationList = E364628B2523812900E456D5 /* Build configuration list for PBXProject "Mindyi" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -228,7 +228,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E364628F2523812900E456D5 /* Mindji */,
+				E364628F2523812900E456D5 /* Mindyi */,
 			);
 		};
 /* End PBXProject section */
@@ -401,16 +401,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Mindji/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Mindyi/Preview Content\"";
 				DEVELOPMENT_TEAM = 2QT2ZQ68VN;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Mindji/Info.plist;
+				INFOPLIST_FILE = Mindyi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amp.Mindji;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amp.Mindyi;
+				PRODUCT_NAME = Mindyi;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -421,16 +421,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Mindji/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Mindyi/Preview Content\"";
 				DEVELOPMENT_TEAM = 2QT2ZQ68VN;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Mindji/Info.plist;
+				INFOPLIST_FILE = Mindyi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amp.Mindji;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amp.Mindyi;
+				PRODUCT_NAME = Mindyi;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -439,7 +439,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E364628B2523812900E456D5 /* Build configuration list for PBXProject "Mindji" */ = {
+		E364628B2523812900E456D5 /* Build configuration list for PBXProject "Mindyi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E36462A22523813000E456D5 /* Debug */,
@@ -448,7 +448,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E36462A42523813000E456D5 /* Build configuration list for PBXNativeTarget "Mindji" */ = {
+		E36462A42523813000E456D5 /* Build configuration list for PBXNativeTarget "Mindyi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E36462A52523813000E456D5 /* Debug */,
