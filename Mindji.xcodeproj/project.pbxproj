@@ -22,6 +22,7 @@
 		E3A18DEB252615A100724D83 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A18DEA252615A100724D83 /* Theme.swift */; };
 		E3D02092252DF1B5008E1082 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D02091252DF1B5008E1082 /* LottieView.swift */; };
 		E3D4CE4E252DF2EF00B29568 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E3D4CE4D252DF2EF00B29568 /* Lottie */; };
+		E3D9DC3B252E160600D7F3FD /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = E3D9DC3A252E160600D7F3FD /* confetti.json */; };
 		E3FF9EAF2528BBE400516664 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF9EAE2528BBE400516664 /* Pie.swift */; };
 		E3FF9EB22528D39B00516664 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF9EB12528D39B00516664 /* Cardify.swift */; };
 /* End PBXBuildFile section */
@@ -43,7 +44,7 @@
 		E3A18DE72526005A00724D83 /* Array+Only.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Only.swift"; sourceTree = "<group>"; };
 		E3A18DEA252615A100724D83 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		E3D02091252DF1B5008E1082 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		E3D9DC38252E0C5F00D7F3FD /* confetti.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = confetti.json; sourceTree = "<group>"; };
+		E3D9DC3A252E160600D7F3FD /* confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = confetti.json; sourceTree = "<group>"; };
 		E3FF9EAE2528BBE400516664 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 		E3FF9EB12528D39B00516664 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,7 +89,7 @@
 		E36462922523812900E456D5 /* Mindji */ = {
 			isa = PBXGroup;
 			children = (
-				E3D9DC39252E0EAD00D7F3FD /* LottieAnimation */,
+				E3D9DC3A252E160600D7F3FD /* confetti.json */,
 				E3FF9EB02528D36200516664 /* View Modifiers */,
 				E323D19A252890BD0036D776 /* Templates */,
 				E3A18DE42525C5AB00724D83 /* Extensions */,
@@ -131,6 +132,7 @@
 		E36DC9F525239D360024F62F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E3D02091252DF1B5008E1082 /* LottieView.swift */,
 				E36462972523812900E456D5 /* PairView.swift */,
 				E3A18DDE2524B59100724D83 /* Grid.swift */,
 				E3A18DE22525BD8900724D83 /* GridLayout.swift */,
@@ -162,15 +164,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E3D9DC39252E0EAD00D7F3FD /* LottieAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				E3D02091252DF1B5008E1082 /* LottieView.swift */,
-				E3D9DC38252E0C5F00D7F3FD /* confetti.json */,
-			);
-			path = LottieAnimation;
 			sourceTree = "<group>";
 		};
 		E3FF9EB02528D36200516664 /* View Modifiers */ = {
@@ -246,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E36462A02523813000E456D5 /* LaunchScreen.storyboard in Resources */,
+				E3D9DC3B252E160600D7F3FD /* confetti.json in Resources */,
 				E364629D2523813000E456D5 /* Preview Assets.xcassets in Resources */,
 				E364629A2523813000E456D5 /* Assets.xcassets in Resources */,
 			);
