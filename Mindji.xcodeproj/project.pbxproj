@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,9 @@
 		E3A18DE62525C5C600724D83 /* Array+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A18DE52525C5C600724D83 /* Array+Identifiable.swift */; };
 		E3A18DE82526005A00724D83 /* Array+Only.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A18DE72526005A00724D83 /* Array+Only.swift */; };
 		E3A18DEB252615A100724D83 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A18DEA252615A100724D83 /* Theme.swift */; };
+		E3D02092252DF1B5008E1082 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D02091252DF1B5008E1082 /* LottieView.swift */; };
+		E3D4CE4E252DF2EF00B29568 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E3D4CE4D252DF2EF00B29568 /* Lottie */; };
+		E3D4CE50252DF35700B29568 /* 21369-confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = E3D4CE4F252DF35700B29568 /* 21369-confetti.json */; };
 		E3FF9EAF2528BBE400516664 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF9EAE2528BBE400516664 /* Pie.swift */; };
 		E3FF9EB22528D39B00516664 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF9EB12528D39B00516664 /* Cardify.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +43,8 @@
 		E3A18DE52525C5C600724D83 /* Array+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Identifiable.swift"; sourceTree = "<group>"; };
 		E3A18DE72526005A00724D83 /* Array+Only.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Only.swift"; sourceTree = "<group>"; };
 		E3A18DEA252615A100724D83 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		E3D02091252DF1B5008E1082 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		E3D4CE4F252DF35700B29568 /* 21369-confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "21369-confetti.json"; path = "../../../../.Trash/21369-confetti.json"; sourceTree = "<group>"; };
 		E3FF9EAE2528BBE400516664 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 		E3FF9EB12528D39B00516664 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3D4CE4E252DF2EF00B29568 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +74,7 @@
 			children = (
 				E36462922523812900E456D5 /* Mindji */,
 				E36462912523812900E456D5 /* Products */,
+				E3D4CE4C252DF2EF00B29568 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +89,7 @@
 		E36462922523812900E456D5 /* Mindji */ = {
 			isa = PBXGroup;
 			children = (
+				E3D4CE4F252DF35700B29568 /* 21369-confetti.json */,
 				E3FF9EB02528D36200516664 /* View Modifiers */,
 				E323D19A252890BD0036D776 /* Templates */,
 				E3A18DE42525C5AB00724D83 /* Extensions */,
@@ -128,6 +136,7 @@
 				E3A18DDE2524B59100724D83 /* Grid.swift */,
 				E3A18DE22525BD8900724D83 /* GridLayout.swift */,
 				E3FF9EAE2528BBE400516664 /* Pie.swift */,
+				E3D02091252DF1B5008E1082 /* LottieView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,6 +157,13 @@
 				E3A18DE72526005A00724D83 /* Array+Only.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E3D4CE4C252DF2EF00B29568 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E3FF9EB02528D36200516664 /* View Modifiers */ = {
@@ -174,6 +190,9 @@
 			dependencies = (
 			);
 			name = Mindji;
+			packageProductDependencies = (
+				E3D4CE4D252DF2EF00B29568 /* Lottie */,
+			);
 			productName = Mindji;
 			productReference = E36462902523812900E456D5 /* Mindji.app */;
 			productType = "com.apple.product-type.application";
@@ -202,6 +221,9 @@
 				Base,
 			);
 			mainGroup = E36462872523812900E456D5;
+			packageReferences = (
+				E3D0208D252DF0FD008E1082 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = E36462912523812900E456D5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -217,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E36462A02523813000E456D5 /* LaunchScreen.storyboard in Resources */,
+				E3D4CE50252DF35700B29568 /* 21369-confetti.json in Resources */,
 				E364629D2523813000E456D5 /* Preview Assets.xcassets in Resources */,
 				E364629A2523813000E456D5 /* Assets.xcassets in Resources */,
 			);
@@ -237,6 +260,7 @@
 				E36DC9F0252392CE0024F62F /* PairModel.swift in Sources */,
 				E3FF9EB22528D39B00516664 /* Cardify.swift in Sources */,
 				E3A18DE62525C5C600724D83 /* Array+Identifiable.swift in Sources */,
+				E3D02092252DF1B5008E1082 /* LottieView.swift in Sources */,
 				E3A18DEB252615A100724D83 /* Theme.swift in Sources */,
 				E3FF9EAF2528BBE400516664 /* Pie.swift in Sources */,
 				E3A18DE32525BD8900724D83 /* GridLayout.swift in Sources */,
@@ -434,6 +458,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E3D0208D252DF0FD008E1082 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E3D4CE4D252DF2EF00B29568 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E3D0208D252DF0FD008E1082 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E36462882523812900E456D5 /* Project object */;
 }

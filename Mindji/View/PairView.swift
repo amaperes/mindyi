@@ -36,38 +36,49 @@ struct PairView: View {
                     .padding()
                     .navigationBarTitle(pairViewModel.theme.name)
                     .foregroundColor(pairViewModel.theme.color)
-                    HStack {
-                        Button("Reset") {
-                            withAnimation(.easeInOut(duration: 0.3)) {
-                                self.pairViewModel.reset()
-                            }
-                            
-                        }
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .padding(10)
-                        .foregroundColor(.white)
-                        .background(LinearGradient(gradient: Gradient(colors: [pairViewModel.theme.color, pairViewModel.theme.accentColor]), startPoint: .leading, endPoint: .trailing))
-                        .cornerRadius(20)
-                        .padding(.horizontal, 10)
-                        Button("New theme") {
-                            withAnimation(.easeOut(duration: 0.3)) {
-                                self.pairViewModel.newGame()
-                            }
-                        }
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .padding(10)
-                        .foregroundColor(.white)
-                        .background(LinearGradient(gradient: Gradient(colors: [pairViewModel.theme.color, pairViewModel.theme.accentColor]), startPoint: .leading, endPoint: .trailing))
-                        .cornerRadius(20)
-                        .padding(.horizontal, 10)
-                    }
+                    
                 } else {
-                    Group {
-                        Text("Game Over!!")
-                        Text("Score: \(pairViewModel.score) ")
+                        GeometryReader { geometry in
+                            VStack {
+                                LottieView(filename: "21369-confetti").offset().frame(width: geometry.size.width, height: geometry.size.height)
+                            }
+                            .overlay(
+                                Group {
+                                    Text("Done!!!")
+                                    Text("Score: \(self.pairViewModel.score)")
+                                }
+                                .padding(20)
+                                .foregroundColor(self.pairViewModel.theme.color)
+                                .background(Color.white).opacity(0.9)
+                                .cornerRadius(20)
+                                .font(.largeTitle)
+                                ,alignment: .center)
+                        }
+                }
+                HStack {
+                    Button("Reset") {
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            self.pairViewModel.reset()
+                        }
+                        
                     }
-                    .transition(.identity)
-                    .animation(Animation.easeOut(duration: 0.7))
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .padding(10)
+                    .foregroundColor(.white)
+                    .background(LinearGradient(gradient: Gradient(colors: [pairViewModel.theme.color, pairViewModel.theme.accentColor]), startPoint: .leading, endPoint: .trailing))
+                    .cornerRadius(20)
+                    .padding(.horizontal, 10)
+                    Button("New theme") {
+                        withAnimation(.easeOut(duration: 0.3)) {
+                            self.pairViewModel.newGame()
+                        }
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .padding(10)
+                    .foregroundColor(.white)
+                    .background(LinearGradient(gradient: Gradient(colors: [pairViewModel.theme.color, pairViewModel.theme.accentColor]), startPoint: .leading, endPoint: .trailing))
+                    .cornerRadius(20)
+                    .padding(.horizontal, 10)
                 }
             }
         }
