@@ -1,6 +1,6 @@
-# MINDYI
+# MINDYI 📱 
 
->  SwiftUI Emoji Matching Game 
+>  🧩 SwiftUI Emoji Matching Game 🧩 
 
 > [![Swift Version][swift-image]][swift-url]
 
